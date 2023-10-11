@@ -17,7 +17,7 @@ group by 1
 ,game_agg_ranked as (
 select *,rank() over (partition by homeTeamName order by durationMinutes desc) as game_duration_rank
 from 
-	game_agg
+game_agg
 )
 
 
