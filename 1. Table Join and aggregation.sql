@@ -11,15 +11,15 @@ SELECT gameId,
 	Max(awayFinalRuns) as awayFinalRuns
 FROM 
 	`bigquery-public-data.baseball.games_wide` a
-group by 1
+group by gameId
 )
  
 , team_duration as (
  
   	select homeTeamName
-			,avg(durationMinutes) as averageHomeTeamDurationMinutes
+		,avg(durationMinutes) as averageHomeTeamDurationMinutes
   	from game_agg
-  	group by 1
+  	group by homeTeamName
  
 )
  
