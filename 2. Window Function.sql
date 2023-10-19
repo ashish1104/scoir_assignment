@@ -24,6 +24,3 @@ game_agg
 select *
 from game_agg_ranked 
 where game_duration_rank = 2
-
-
-+1
